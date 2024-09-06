@@ -1,0 +1,112 @@
+[
+  {
+    "ContainingType": "OhanaSafeguard.Controllers.Tables.DefaultFilterController",
+    "Method": "Get",
+    "RelativePath": "DefaultFilter",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OhanaSafeguard.Controllers.Tables.FilterController",
+    "Method": "Get",
+    "RelativePath": "Filter",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OhanaSafeguard.Controllers.Tables.FilterController",
+    "Method": "Post",
+    "RelativePath": "Filter",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "filter",
+        "Type": "Ohana.Domain.Filter",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OhanaSafeguard.Controllers.Tables.FilterController",
+    "Method": "Delete",
+    "RelativePath": "Filter",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "filter",
+        "Type": "Ohana.Domain.Filter",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OhanaSafeguard.Controllers.Tables.FilterController",
+    "Method": "GetByUser",
+    "RelativePath": "Filter/UserId",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OhanaSafeguard.Controllers.Tables.UserController",
+    "Method": "Get",
+    "RelativePath": "User",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OhanaSafeguard.Controllers.Tables.UserController",
+    "Method": "Post",
+    "RelativePath": "User",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "user",
+        "Type": "Ohana.Domain.User",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OhanaSafeguard.Controllers.Tables.UserController",
+    "Method": "GetUser",
+    "RelativePath": "User/UserId",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

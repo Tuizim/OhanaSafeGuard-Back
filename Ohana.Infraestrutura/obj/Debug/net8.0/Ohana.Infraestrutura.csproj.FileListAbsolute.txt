@@ -1,0 +1,17 @@
+C:\Users\Tui-Dev\Documents\Projetos\back\OhanaSafeguard\Ohana.Infraestrutura\bin\Debug\net8.0\Ohana.Infraestrutura.deps.json
+C:\Users\Tui-Dev\Documents\Projetos\back\OhanaSafeguard\Ohana.Infraestrutura\bin\Debug\net8.0\Ohana.Infraestrutura.dll
+C:\Users\Tui-Dev\Documents\Projetos\back\OhanaSafeguard\Ohana.Infraestrutura\bin\Debug\net8.0\Ohana.Infraestrutura.pdb
+C:\Users\Tui-Dev\Documents\Projetos\back\OhanaSafeguard\Ohana.Infraestrutura\bin\Debug\net8.0\Ohana.Domain.dll
+C:\Users\Tui-Dev\Documents\Projetos\back\OhanaSafeguard\Ohana.Infraestrutura\bin\Debug\net8.0\Ohana.Domain.pdb
+C:\Users\Tui-Dev\Documents\Projetos\back\OhanaSafeguard\Ohana.Infraestrutura\obj\Debug\net8.0\Ohana.Infraestrutura.csproj.AssemblyReference.cache
+C:\Users\Tui-Dev\Documents\Projetos\back\OhanaSafeguard\Ohana.Infraestrutura\obj\Debug\net8.0\Ohana.Infraestrutura.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Tui-Dev\Documents\Projetos\back\OhanaSafeguard\Ohana.Infraestrutura\obj\Debug\net8.0\Ohana.Infraestrutura.AssemblyInfoInputs.cache
+C:\Users\Tui-Dev\Documents\Projetos\back\OhanaSafeguard\Ohana.Infraestrutura\obj\Debug\net8.0\Ohana.Infraestrutura.AssemblyInfo.cs
+C:\Users\Tui-Dev\Documents\Projetos\back\OhanaSafeguard\Ohana.Infraestrutura\obj\Debug\net8.0\Ohana.Infraestrutura.csproj.CoreCompileInputs.cache
+C:\Users\Tui-Dev\Documents\Projetos\back\OhanaSafeguard\Ohana.Infraestrutura\obj\Debug\net8.0\Ohana.In.B63FCD1A.Up2Date
+C:\Users\Tui-Dev\Documents\Projetos\back\OhanaSafeguard\Ohana.Infraestrutura\obj\Debug\net8.0\Ohana.Infraestrutura.dll
+C:\Users\Tui-Dev\Documents\Projetos\back\OhanaSafeguard\Ohana.Infraestrutura\obj\Debug\net8.0\refint\Ohana.Infraestrutura.dll
+C:\Users\Tui-Dev\Documents\Projetos\back\OhanaSafeguard\Ohana.Infraestrutura\obj\Debug\net8.0\Ohana.Infraestrutura.pdb
+C:\Users\Tui-Dev\Documents\Projetos\back\OhanaSafeguard\Ohana.Infraestrutura\obj\Debug\net8.0\ref\Ohana.Infraestrutura.dll
+C:\Users\Tui-Dev\Documents\Projetos\back\OhanaSafeguard\Ohana.Infraestrutura\bin\Debug\net8.0\Ohana.View.dll
+C:\Users\Tui-Dev\Documents\Projetos\back\OhanaSafeguard\Ohana.Infraestrutura\bin\Debug\net8.0\Ohana.View.pdb
