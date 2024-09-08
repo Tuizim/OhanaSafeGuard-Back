@@ -11,6 +11,7 @@
     <WebStackScaffolding_DbContextTypeFullName>Ohana.Infraestrutura.OhanaDbContext</WebStackScaffolding_DbContextTypeFullName>
     <WebStackScaffolding_IsAsyncSelected>False</WebStackScaffolding_IsAsyncSelected>
     <WebStackScaffolding_IsViewGenerationSelected>False</WebStackScaffolding_IsViewGenerationSelected>
+    <NameOfLastUsedPublishProfile>C:\Users\Tui-Dev\Documents\Projetos\back\OhanaSafeguard\OhanaSafeguard\Properties\PublishProfiles\OhanaSafeGuard - Web Deploy.pubxml</NameOfLastUsedPublishProfile>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DebuggerFlavor>ProjectDebugger</DebuggerFlavor>

@@ -1,0 +1,12 @@
+C:\Users\Tui-Dev\Documents\Projetos\back\OhanaSafeguard\Ohana.Domain\bin\Release\net8.0\Ohana.Domain.deps.json
+C:\Users\Tui-Dev\Documents\Projetos\back\OhanaSafeguard\Ohana.Domain\bin\Release\net8.0\Ohana.Domain.dll
+C:\Users\Tui-Dev\Documents\Projetos\back\OhanaSafeguard\Ohana.Domain\bin\Release\net8.0\Ohana.Domain.pdb
+C:\Users\Tui-Dev\Documents\Projetos\back\OhanaSafeguard\Ohana.Domain\obj\Release\net8.0\Ohana.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Tui-Dev\Documents\Projetos\back\OhanaSafeguard\Ohana.Domain\obj\Release\net8.0\Ohana.Domain.AssemblyInfoInputs.cache
+C:\Users\Tui-Dev\Documents\Projetos\back\OhanaSafeguard\Ohana.Domain\obj\Release\net8.0\Ohana.Domain.AssemblyInfo.cs
+C:\Users\Tui-Dev\Documents\Projetos\back\OhanaSafeguard\Ohana.Domain\obj\Release\net8.0\Ohana.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Tui-Dev\Documents\Projetos\back\OhanaSafeguard\Ohana.Domain\obj\Release\net8.0\Ohana.Domain.sourcelink.json
+C:\Users\Tui-Dev\Documents\Projetos\back\OhanaSafeguard\Ohana.Domain\obj\Release\net8.0\Ohana.Domain.dll
+C:\Users\Tui-Dev\Documents\Projetos\back\OhanaSafeguard\Ohana.Domain\obj\Release\net8.0\refint\Ohana.Domain.dll
+C:\Users\Tui-Dev\Documents\Projetos\back\OhanaSafeguard\Ohana.Domain\obj\Release\net8.0\Ohana.Domain.pdb
+C:\Users\Tui-Dev\Documents\Projetos\back\OhanaSafeguard\Ohana.Domain\obj\Release\net8.0\ref\Ohana.Domain.dll

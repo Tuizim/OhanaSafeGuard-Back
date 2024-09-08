@@ -1,0 +1,12 @@
+C:\Users\Tui-Dev\Documents\Projetos\back\OhanaSafeguard\Ohana.View\bin\Release\net8.0\Ohana.View.deps.json
+C:\Users\Tui-Dev\Documents\Projetos\back\OhanaSafeguard\Ohana.View\bin\Release\net8.0\Ohana.View.dll
+C:\Users\Tui-Dev\Documents\Projetos\back\OhanaSafeguard\Ohana.View\bin\Release\net8.0\Ohana.View.pdb
+C:\Users\Tui-Dev\Documents\Projetos\back\OhanaSafeguard\Ohana.View\obj\Release\net8.0\Ohana.View.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Tui-Dev\Documents\Projetos\back\OhanaSafeguard\Ohana.View\obj\Release\net8.0\Ohana.View.AssemblyInfoInputs.cache
+C:\Users\Tui-Dev\Documents\Projetos\back\OhanaSafeguard\Ohana.View\obj\Release\net8.0\Ohana.View.AssemblyInfo.cs
+C:\Users\Tui-Dev\Documents\Projetos\back\OhanaSafeguard\Ohana.View\obj\Release\net8.0\Ohana.View.csproj.CoreCompileInputs.cache
+C:\Users\Tui-Dev\Documents\Projetos\back\OhanaSafeguard\Ohana.View\obj\Release\net8.0\Ohana.View.sourcelink.json
+C:\Users\Tui-Dev\Documents\Projetos\back\OhanaSafeguard\Ohana.View\obj\Release\net8.0\Ohana.View.dll
+C:\Users\Tui-Dev\Documents\Projetos\back\OhanaSafeguard\Ohana.View\obj\Release\net8.0\refint\Ohana.View.dll
+C:\Users\Tui-Dev\Documents\Projetos\back\OhanaSafeguard\Ohana.View\obj\Release\net8.0\Ohana.View.pdb
+C:\Users\Tui-Dev\Documents\Projetos\back\OhanaSafeguard\Ohana.View\obj\Release\net8.0\ref\Ohana.View.dll

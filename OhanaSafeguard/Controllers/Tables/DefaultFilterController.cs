@@ -17,25 +17,22 @@ namespace OhanaSafeguard.Controllers.Tables
             _db = db ?? throw new ArgumentNullException(nameof(db));
         }
         [HttpGet]
-        public async Task<IActionResult> Get()
+        public async Task<ReturnMessage> Get()
         {
             try
             {
                 var filters = await _db.DefaultFilters.ToListAsync();
                 if (filters == null)
                 {
-                    return NotFound();
+                    return new ReturnMessage(ErrorMessages.NotFound, false);
                 }
-                else
-                {
-                    return Ok(filters);
-                }
+                return new ReturnMessage( message: SuccessMessage.GetSuccess, success: true , response: filters);
             }
             catch (Exception ex)
             {
-                return BadRequest(ErrorMessages.ServerError + ex.Message);
+                return new ReturnMessage(ErrorMessages.ServerError + ex.Message, false);
             }
         }
-        
+
     }
 }

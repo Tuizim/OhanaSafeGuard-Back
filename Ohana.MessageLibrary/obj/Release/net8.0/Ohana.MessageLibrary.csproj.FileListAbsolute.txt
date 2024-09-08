@@ -1,0 +1,12 @@
+C:\Users\Tui-Dev\Documents\Projetos\back\OhanaSafeguard\Ohana.MessageLibrary\bin\Release\net8.0\Ohana.MessageLibrary.deps.json
+C:\Users\Tui-Dev\Documents\Projetos\back\OhanaSafeguard\Ohana.MessageLibrary\bin\Release\net8.0\Ohana.MessageLibrary.dll
+C:\Users\Tui-Dev\Documents\Projetos\back\OhanaSafeguard\Ohana.MessageLibrary\bin\Release\net8.0\Ohana.MessageLibrary.pdb
+C:\Users\Tui-Dev\Documents\Projetos\back\OhanaSafeguard\Ohana.MessageLibrary\obj\Release\net8.0\Ohana.MessageLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Tui-Dev\Documents\Projetos\back\OhanaSafeguard\Ohana.MessageLibrary\obj\Release\net8.0\Ohana.MessageLibrary.AssemblyInfoInputs.cache
+C:\Users\Tui-Dev\Documents\Projetos\back\OhanaSafeguard\Ohana.MessageLibrary\obj\Release\net8.0\Ohana.MessageLibrary.AssemblyInfo.cs
+C:\Users\Tui-Dev\Documents\Projetos\back\OhanaSafeguard\Ohana.MessageLibrary\obj\Release\net8.0\Ohana.MessageLibrary.csproj.CoreCompileInputs.cache
+C:\Users\Tui-Dev\Documents\Projetos\back\OhanaSafeguard\Ohana.MessageLibrary\obj\Release\net8.0\Ohana.MessageLibrary.sourcelink.json
+C:\Users\Tui-Dev\Documents\Projetos\back\OhanaSafeguard\Ohana.MessageLibrary\obj\Release\net8.0\Ohana.MessageLibrary.dll
+C:\Users\Tui-Dev\Documents\Projetos\back\OhanaSafeguard\Ohana.MessageLibrary\obj\Release\net8.0\refint\Ohana.MessageLibrary.dll
+C:\Users\Tui-Dev\Documents\Projetos\back\OhanaSafeguard\Ohana.MessageLibrary\obj\Release\net8.0\Ohana.MessageLibrary.pdb
+C:\Users\Tui-Dev\Documents\Projetos\back\OhanaSafeguard\Ohana.MessageLibrary\obj\Release\net8.0\ref\Ohana.MessageLibrary.dll

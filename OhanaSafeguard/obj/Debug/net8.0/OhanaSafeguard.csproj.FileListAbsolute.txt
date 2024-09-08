@@ -237,3 +237,4 @@ C:\Users\Tui-Dev\Documents\Projetos\back\OhanaSafeguard\OhanaSafeguard\bin\Debug
 C:\Users\Tui-Dev\Documents\Projetos\back\OhanaSafeguard\OhanaSafeguard\bin\Debug\net8.0\Ohana.MessageLibrary.pdb
 C:\Users\Tui-Dev\Documents\Projetos\back\OhanaSafeguard\OhanaSafeguard\bin\Debug\net8.0\Ohana.View.dll
 C:\Users\Tui-Dev\Documents\Projetos\back\OhanaSafeguard\OhanaSafeguard\bin\Debug\net8.0\Ohana.View.pdb
+C:\Users\Tui-Dev\Documents\Projetos\back\OhanaSafeguard\OhanaSafeguard\obj\Debug\net8.0\OhanaSafeguard.sourcelink.json

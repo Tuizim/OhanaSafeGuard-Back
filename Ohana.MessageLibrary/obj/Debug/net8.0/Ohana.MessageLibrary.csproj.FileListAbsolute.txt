@@ -9,3 +9,4 @@ C:\Users\Tui-Dev\Documents\Projetos\back\OhanaSafeguard\Ohana.MessageLibrary\obj
 C:\Users\Tui-Dev\Documents\Projetos\back\OhanaSafeguard\Ohana.MessageLibrary\obj\Debug\net8.0\refint\Ohana.MessageLibrary.dll
 C:\Users\Tui-Dev\Documents\Projetos\back\OhanaSafeguard\Ohana.MessageLibrary\obj\Debug\net8.0\Ohana.MessageLibrary.pdb
 C:\Users\Tui-Dev\Documents\Projetos\back\OhanaSafeguard\Ohana.MessageLibrary\obj\Debug\net8.0\ref\Ohana.MessageLibrary.dll
+C:\Users\Tui-Dev\Documents\Projetos\back\OhanaSafeguard\Ohana.MessageLibrary\obj\Debug\net8.0\Ohana.MessageLibrary.sourcelink.json

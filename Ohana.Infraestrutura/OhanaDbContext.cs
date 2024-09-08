@@ -9,13 +9,14 @@ namespace Ohana.Infraestrutura
     {
         #region atributos
         private IConfiguration _configuration;
-        private DbSet<Filter> filters;
         #endregion
 
         #region tabelas
         public DbSet<User> Users { get; set; }
         public DbSet<Filter> Filters {  get; set; }
         public DbSet<DefaultFilter> DefaultFilters { get; set; }
+        public DbSet<CredentialStorage> credentialStorages { get; set; }
+        
         #endregion
         
         #region Views

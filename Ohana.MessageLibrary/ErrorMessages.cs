@@ -15,5 +15,9 @@
         public const string JustExist = "There is already a similar field created for this user";
         public const string CantDelete = "It will not be possible to delete this item as it has not been located.";
         #endregion
+        #region Insert
+        public const string PostError = "An unexpected error occurred when we tried to insert.";
+        public const string UpdateError = "An unexpected error occurred when we tried to update.";
+        #endregion
     }
 }

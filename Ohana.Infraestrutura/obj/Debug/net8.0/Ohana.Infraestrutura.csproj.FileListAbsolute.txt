@@ -15,3 +15,4 @@ C:\Users\Tui-Dev\Documents\Projetos\back\OhanaSafeguard\Ohana.Infraestrutura\obj
 C:\Users\Tui-Dev\Documents\Projetos\back\OhanaSafeguard\Ohana.Infraestrutura\obj\Debug\net8.0\ref\Ohana.Infraestrutura.dll
 C:\Users\Tui-Dev\Documents\Projetos\back\OhanaSafeguard\Ohana.Infraestrutura\bin\Debug\net8.0\Ohana.View.dll
 C:\Users\Tui-Dev\Documents\Projetos\back\OhanaSafeguard\Ohana.Infraestrutura\bin\Debug\net8.0\Ohana.View.pdb
+C:\Users\Tui-Dev\Documents\Projetos\back\OhanaSafeguard\Ohana.Infraestrutura\obj\Debug\net8.0\Ohana.Infraestrutura.sourcelink.json

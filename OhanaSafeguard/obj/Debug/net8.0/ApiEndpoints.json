@@ -1,5 +1,57 @@
 [
   {
+    "ContainingType": "OhanaSafeguard.Controllers.Tables.CredentialStorageController",
+    "Method": "Post",
+    "RelativePath": "CredentialStorage",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "credentialStorage",
+        "Type": "Ohana.Domain.CredentialStorage",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Ohana.MessageLibrary.ReturnMessage",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "OhanaSafeguard.Controllers.Tables.CredentialStorageController",
+    "Method": "Get",
+    "RelativePath": "CredentialStorage/UserId",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Ohana.MessageLibrary.ReturnMessage",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "OhanaSafeguard.Controllers.Tables.DefaultFilterController",
     "Method": "Get",
     "RelativePath": "DefaultFilter",
@@ -7,7 +59,17 @@
     "IsController": true,
     "Order": 0,
     "Parameters": [],
-    "ReturnTypes": []
+    "ReturnTypes": [
+      {
+        "Type": "Ohana.MessageLibrary.ReturnMessage",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
     "ContainingType": "OhanaSafeguard.Controllers.Tables.FilterController",
@@ -17,7 +79,17 @@
     "IsController": true,
     "Order": 0,
     "Parameters": [],
-    "ReturnTypes": []
+    "ReturnTypes": [
+      {
+        "Type": "Ohana.MessageLibrary.ReturnMessage",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
     "ContainingType": "OhanaSafeguard.Controllers.Tables.FilterController",
@@ -33,7 +105,17 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
+    "ReturnTypes": [
+      {
+        "Type": "Ohana.MessageLibrary.ReturnMessage",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
     "ContainingType": "OhanaSafeguard.Controllers.Tables.FilterController",
@@ -49,7 +131,17 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
+    "ReturnTypes": [
+      {
+        "Type": "Ohana.MessageLibrary.ReturnMessage",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
     "ContainingType": "OhanaSafeguard.Controllers.Tables.FilterController",
@@ -65,44 +157,59 @@
         "IsRequired": false
       }
     ],
-    "ReturnTypes": []
+    "ReturnTypes": [
+      {
+        "Type": "Ohana.MessageLibrary.ReturnMessage",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
     "ContainingType": "OhanaSafeguard.Controllers.Tables.UserController",
-    "Method": "Get",
+    "Method": "GetUserId",
     "RelativePath": "User",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "OhanaSafeguard.Controllers.Tables.UserController",
-    "Method": "Post",
-    "RelativePath": "User",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
     "Parameters": [
       {
-        "Name": "user",
-        "Type": "Ohana.Domain.User",
-        "IsRequired": true
+        "Name": "login",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "password",
+        "Type": "System.String",
+        "IsRequired": false
       }
     ],
-    "ReturnTypes": []
+    "ReturnTypes": [
+      {
+        "Type": "Ohana.MessageLibrary.ReturnMessage",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
-    "ContainingType": "OhanaSafeguard.Controllers.Tables.UserController",
-    "Method": "GetUser",
-    "RelativePath": "User/UserId",
+    "ContainingType": "OhanaSafeguard.Controllers.Views.UserFiltersViewController",
+    "Method": "Get",
+    "RelativePath": "UserFiltersView/UserId",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "id",
+        "Name": "userId",
         "Type": "System.Int32",
         "IsRequired": false
       }

@@ -9,3 +9,4 @@ C:\Users\Tui-Dev\Documents\Projetos\back\OhanaSafeguard\Ohana.Domain\obj\Debug\n
 C:\Users\Tui-Dev\Documents\Projetos\back\OhanaSafeguard\Ohana.Domain\obj\Debug\net8.0\refint\Ohana.Domain.dll
 C:\Users\Tui-Dev\Documents\Projetos\back\OhanaSafeguard\Ohana.Domain\obj\Debug\net8.0\Ohana.Domain.pdb
 C:\Users\Tui-Dev\Documents\Projetos\back\OhanaSafeguard\Ohana.Domain\obj\Debug\net8.0\ref\Ohana.Domain.dll
+C:\Users\Tui-Dev\Documents\Projetos\back\OhanaSafeguard\Ohana.Domain\obj\Debug\net8.0\Ohana.Domain.sourcelink.json

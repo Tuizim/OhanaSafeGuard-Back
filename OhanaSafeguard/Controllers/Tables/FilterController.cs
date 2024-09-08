@@ -19,59 +19,63 @@ namespace OhanaSafeguard.Controllers.Tables
         }
 
         [HttpGet]
-        public async Task<IActionResult> Get()
+        public async Task<ReturnMessage> Get()
         {
             try
             {
                 var filters = await _db.Filters.ToListAsync();
                 if (filters == null)
                 {
-                    return NotFound();
+                    return new ReturnMessage(ErrorMessages.NotFound, false);
                 }
-                else { return Ok(filters); }
+                return new ReturnMessage(message: SuccessMessage.GetSuccess, success: true , response: filters);
             }
             catch
             {
-                throw new Exception(ErrorMessages.ServerError);
+                return new ReturnMessage(ErrorMessages.ServerError, false);
             }
         }
-        
+
         [HttpGet("UserId")]
-        public async Task<IActionResult> GetByUser(int userId)
+        public async Task<ReturnMessage> GetByUser(int userId)
         {
             try
             {
                 var filters = await _db.Filters.FindAsync(userId);
                 if (filters == null)
                 {
-                    return NotFound();
+                    return new ReturnMessage(ErrorMessages.NotFound, false);
                 }
-                else
-                {
-                    return Ok(filters);
-                }
+                return new ReturnMessage(SuccessMessage.GetSuccess, true);
             }
             catch
             {
-                throw new Exception(ErrorMessages.ServerError);
+                return new ReturnMessage(ErrorMessages.ServerError, false);
             }
         }
 
         [HttpPost]
-        public async Task<IActionResult> Post([FromBody] Filter filter)
+        public async Task<ReturnMessage> Post([FromBody] Filter filter)
         {
-            var filters = await _db.Filters.AnyAsync(f => f.UserId == filter.UserId && f.Name == filter.Name);
-            if (filters)
+            try
             {
-                return BadRequest(ErrorMessages.JustExist);
+                var filters = await _db.Filters.AnyAsync(f => f.UserId == filter.UserId && f.Name == filter.Name);
+                if (filters)
+                {
+                    return new ReturnMessage(ErrorMessages.JustExist, false);
+                }
+                _db.Filters.Add(filter);
+                _db.SaveChanges();
+                return new ReturnMessage (message: SuccessMessage.InsertSuccess ,success: true, response: filters);
             }
-            _db.Filters.Add(filter);
-            _db.SaveChanges();
-            return Ok(filter);
+            catch (Exception ex)
+            {
+                return new ReturnMessage(ErrorMessages.ServerError + ex.Message, false);
+            }
         }
 
         [HttpDelete]
-        public async Task<IActionResult> Delete([FromBody] Filter filter)
+        public async Task<ReturnMessage> Delete([FromBody] Filter filter)
         {
             try
             {
@@ -79,7 +83,7 @@ namespace OhanaSafeguard.Controllers.Tables
                 {
                     _db.Filters.Remove(filter);
                     _db.SaveChanges();
-                    return Ok(SuccessMessage.DeleteSuccess);
+                    return new ReturnMessage(SuccessMessage.DeleteSuccess, true);
                 }
                 else
                 {
@@ -88,14 +92,14 @@ namespace OhanaSafeguard.Controllers.Tables
                     {
                         _db.Filters.Remove(filterToDelete);
                         _db.SaveChanges();
-                        return Ok(SuccessMessage.DeleteSuccess);
+                        return new ReturnMessage( SuccessMessage.DeleteSuccess, true);
                     }
                 }
-                return BadRequest(ErrorMessages.CantDelete);
+                return new ReturnMessage(ErrorMessages.CantDelete, false);
             }
             catch
             {
-                return BadRequest(ErrorMessages.ServerError);
+                return new ReturnMessage(ErrorMessages.CantDelete, false);
             }
         }
     }

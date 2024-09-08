@@ -23,53 +23,20 @@ namespace OhanaSafeguard.Controllers.Tables
         }
 
         [HttpGet]
-        public async Task<IActionResult> Get()
+        public async Task<ReturnMessage> GetUserId( string login,string password)
         {
             try
             {
-                var user = await _db.Users.ToListAsync();
+                var user = await _db.Users.FirstOrDefaultAsync(u => u.Login == login && u.Password == password);
                 if (user == null)
                 {
-                    return NotFound();
+                    return new ReturnMessage(ErrorMessages.NotFound, false);
                 }
-                else { return Ok(user); }
+                return new ReturnMessage(success: true, message: SuccessMessage.GetSuccess, response: user.Id);
             }
             catch
             {
-                return BadRequest(ErrorMessages.ServerError);
-            }
-        }
-        
-        [HttpGet ("UserId")]
-        public async Task<IActionResult> GetUser(int id)
-        {
-            try
-            {
-                var user = await _db.Users.FindAsync(id);
-                if (user == null)
-                {
-                    return NotFound();
-                }
-                else { return Ok(user); }
-            }
-            catch
-            {
-                return BadRequest(ErrorMessages.ServerError);
-            }
-        }
-
-        [HttpPost]
-        public async Task<IActionResult> Post([FromBody] User user)
-        {
-            try
-            {
-                _db.Users.Add(user);
-                await _db.SaveChangesAsync();
-                return Ok(user);
-            }
-            catch
-            {
-                return BadRequest(ErrorMessages.ServerError);
+                return new ReturnMessage(ErrorMessages.ServerError, false);
             }
         }
     }
