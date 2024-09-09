@@ -25,7 +25,7 @@ namespace OhanaSafeguard.Controllers.Tables
                 {
                     return new ReturnMessage(ErrorMessages.NotFound, false);
                 }
-                return new ReturnMessage(message: SuccessMessage.GetSuccess, success: false, response: credentials);
+                return new ReturnMessage(message: SuccessMessage.GetSuccess, success: true, response: credentials);
             }
             catch (Exception ex)
             {

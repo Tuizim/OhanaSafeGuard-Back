@@ -21,11 +21,13 @@ namespace Ohana.Infraestrutura
         
         #region Views
         public DbSet<UserFiltersView> UserFilterViews { get; set; }
-        
+        public DbSet<CredentialView> CredentialViews { get; set; }
+
         //Configuração da view
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<UserFiltersView>().HasNoKey();
+            modelBuilder.Entity<CredentialView>().HasNoKey();
         }
 
         #endregion

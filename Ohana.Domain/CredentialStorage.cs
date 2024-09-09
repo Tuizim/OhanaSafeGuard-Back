@@ -18,6 +18,7 @@ namespace Ohana.Domain
         public string? Url { get; set; }
         [Column("user_id")]
         public int UserId { get; set; }
-
+        [Column("filter_id")]
+        public int Filter {  get; set; }
     }
 }

@@ -7,26 +7,26 @@ namespace OhanaSafeguard.Controllers.Views
 {
     [ApiController]
     [Route("[controller]")]
-    public class UserFiltersViewController : Controller
+    public class CredentialViewController : Controller
     {
         OhanaDbContext _db;
 
-        public UserFiltersViewController(OhanaDbContext db)
+        public CredentialViewController(OhanaDbContext db)
         {
             _db = db ?? throw new ArgumentNullException(nameof(db));
         }
-
-        [HttpGet("UserId")]
-        public async Task< ReturnMessage >Get(int userId)
+        [HttpGet ("UserId")]
+        public async Task<ReturnMessage> Get(int UserId)
         {
             try
             {
-                var filters = await _db.UserFilterViews.Where(f => f.UserId == userId).ToListAsync();
-                if (filters == null)
+                var filter = await _db.CredentialViews.Where(cv => cv.UserId == UserId).ToListAsync();
+                if (filter == null)
                 {
-                    return new ReturnMessage(ErrorMessages.NotFound , false);
+                    return new ReturnMessage(ErrorMessages.NotFound,false);
                 }
-                return new ReturnMessage(message: SuccessMessage.GetSuccess, response: filters, success: true);
+                return new ReturnMessage(filter, SuccessMessage.GetSuccess, true);
+
             }
             catch (Exception ex)
             {

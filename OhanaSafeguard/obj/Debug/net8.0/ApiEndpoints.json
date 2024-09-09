@@ -27,6 +27,32 @@
   },
   {
     "ContainingType": "OhanaSafeguard.Controllers.Tables.CredentialStorageController",
+    "Method": "Delete",
+    "RelativePath": "CredentialStorage",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "credential",
+        "Type": "Ohana.Domain.CredentialStorage",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Ohana.MessageLibrary.ReturnMessage",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "OhanaSafeguard.Controllers.Tables.CredentialStorageController",
     "Method": "Get",
     "RelativePath": "CredentialStorage/UserId",
     "HttpMethod": "GET",
@@ -35,6 +61,32 @@
     "Parameters": [
       {
         "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Ohana.MessageLibrary.ReturnMessage",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "OhanaSafeguard.Controllers.Views.CredentialViewController",
+    "Method": "Get",
+    "RelativePath": "CredentialView/UserId",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "UserId",
         "Type": "System.Int32",
         "IsRequired": false
       }
@@ -214,6 +266,16 @@
         "IsRequired": false
       }
     ],
-    "ReturnTypes": []
+    "ReturnTypes": [
+      {
+        "Type": "Ohana.MessageLibrary.ReturnMessage",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   }
 ]
