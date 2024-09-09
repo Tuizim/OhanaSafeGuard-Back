@@ -16,5 +16,7 @@ namespace Ohana.View
         public string? FIlterName { get; set; }
         [Column("user_id")]
         public int UserId { get; set; }
+        [Column("id")]
+        public int CredentialId { get; set; }
     }
 }

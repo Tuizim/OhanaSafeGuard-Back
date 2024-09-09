@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Ohana.View")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c4d4b537da8e8883f58c784da6b6ba900b087484")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f78f5bb1279d05d2b5cc011998c69ba22b65805b")]
 [assembly: System.Reflection.AssemblyProductAttribute("Ohana.View")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Ohana.View")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
