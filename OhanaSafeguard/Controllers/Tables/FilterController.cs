@@ -28,7 +28,7 @@ namespace OhanaSafeguard.Controllers.Tables
                 {
                     return new ReturnMessage(ErrorMessages.NotFound, false);
                 }
-                return new ReturnMessage(message: SuccessMessage.GetSuccess, success: true , response: filters);
+                return new ReturnMessage(message: SuccessMessage.GetSuccess, success: true, response: filters);
             }
             catch
             {
@@ -41,19 +41,35 @@ namespace OhanaSafeguard.Controllers.Tables
         {
             try
             {
-                var filters = await _db.Filters.FindAsync(userId);
+                var filters = await _db.Filters.Where(f => f.UserId == userId).ToListAsync();
                 if (filters == null)
                 {
                     return new ReturnMessage(ErrorMessages.NotFound, false);
                 }
-                return new ReturnMessage(SuccessMessage.GetSuccess, true);
+                return new ReturnMessage(filters, SuccessMessage.GetSuccess, true);
             }
             catch
             {
                 return new ReturnMessage(ErrorMessages.ServerError, false);
             }
         }
-
+        [HttpGet("UserId/FilterId")]
+        public ReturnMessage GetById(int id, int userId)
+        {
+            try
+            {
+                var filter = _db.Filters.Where(f => f.Id == id &&  f.UserId == userId).FirstOrDefault();
+                if (filter == null)
+                {
+                    return new ReturnMessage(ErrorMessages.NotFound,false);
+                }
+                return new ReturnMessage(filter, SuccessMessage.GetSuccess, true);
+            }
+            catch
+            {
+                return new ReturnMessage(ErrorMessages.ServerError,false);
+            }
+        }
         [HttpPost]
         public async Task<ReturnMessage> Post([FromBody] Filter filter)
         {
@@ -64,9 +80,17 @@ namespace OhanaSafeguard.Controllers.Tables
                 {
                     return new ReturnMessage(ErrorMessages.JustExist, false);
                 }
+                var filterAny = _db.Filters.Any(f => f.UserId == filter.UserId && f.Id == filter.Id);
+                if (filterAny) 
+                {
+                    _db.Filters.Update(filter);
+                    _db.SaveChanges();
+                    return new ReturnMessage(message: SuccessMessage.UpdateSuccess, success: true, response: filters);
+
+                }
                 _db.Filters.Add(filter);
                 _db.SaveChanges();
-                return new ReturnMessage (message: SuccessMessage.InsertSuccess ,success: true, response: filters);
+                return new ReturnMessage(message: SuccessMessage.InsertSuccess, success: true, response: filters);
             }
             catch (Exception ex)
             {
@@ -92,7 +116,7 @@ namespace OhanaSafeguard.Controllers.Tables
                     {
                         _db.Filters.Remove(filterToDelete);
                         _db.SaveChanges();
-                        return new ReturnMessage( SuccessMessage.DeleteSuccess, true);
+                        return new ReturnMessage(SuccessMessage.DeleteSuccess, true);
                     }
                 }
                 return new ReturnMessage(ErrorMessages.CantDelete, false);

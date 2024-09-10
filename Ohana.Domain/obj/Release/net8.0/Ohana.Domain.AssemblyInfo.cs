@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Ohana.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f78f5bb1279d05d2b5cc011998c69ba22b65805b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+450265b3a631cc4fd32bb27e9ac216f88361d174")]
 [assembly: System.Reflection.AssemblyProductAttribute("Ohana.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Ohana.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -78,6 +78,37 @@
     ]
   },
   {
+    "ContainingType": "OhanaSafeguard.Controllers.Tables.CredentialStorageController",
+    "Method": "GetById",
+    "RelativePath": "CredentialStorage/UserId/CredentialId",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "credentialId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Ohana.MessageLibrary.ReturnMessage",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "OhanaSafeguard.Controllers.Views.CredentialViewController",
     "Method": "Get",
     "RelativePath": "CredentialView/UserId",
