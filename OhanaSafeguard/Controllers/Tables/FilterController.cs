@@ -36,12 +36,12 @@ namespace OhanaSafeguard.Controllers.Tables
             }
         }
 
-        [HttpGet("UserId")]
-        public async Task<ReturnMessage> GetByUser(int userId)
+        [HttpGet("userrow")]
+        public async Task<ReturnMessage> GetByUser(string userrow)
         {
             try
             {
-                var filters = await _db.Filters.Where(f => f.UserId == userId).ToListAsync();
+                var filters = await _db.Filters.Where(f => f.UserRow == userrow).ToListAsync();
                 if (filters == null)
                 {
                     return new ReturnMessage(ErrorMessages.NotFound, false);
@@ -53,12 +53,12 @@ namespace OhanaSafeguard.Controllers.Tables
                 return new ReturnMessage(ErrorMessages.ServerError, false);
             }
         }
-        [HttpGet("UserId/FilterId")]
-        public ReturnMessage GetById(int id, int userId)
+        [HttpGet("UserId/UserRow")]
+        public ReturnMessage GetById(int id, string userrow)
         {
             try
             {
-                var filter = _db.Filters.Where(f => f.Id == id &&  f.UserId == userId).FirstOrDefault();
+                var filter = _db.Filters.Where(f => f.Id == id &&  f.UserRow == userrow).FirstOrDefault();
                 if (filter == null)
                 {
                     return new ReturnMessage(ErrorMessages.NotFound,false);
@@ -75,12 +75,18 @@ namespace OhanaSafeguard.Controllers.Tables
         {
             try
             {
-                var filters = await _db.Filters.AnyAsync(f => f.UserId == filter.UserId && f.Name == filter.Name);
+                var userExist = _db.Users.Any(u => u.UserRow == filter.UserRow);
+                if (userExist == false)
+                {
+                    return new ReturnMessage(ErrorMessages.CantDelete, false);
+                }
+
+                var filters = await _db.Filters.AnyAsync(f => f.UserRow == filter.UserRow && f.Name == filter.Name);
                 if (filters)
                 {
                     return new ReturnMessage(ErrorMessages.JustExist, false);
                 }
-                var filterAny = _db.Filters.Any(f => f.UserId == filter.UserId && f.Id == filter.Id);
+                var filterAny = _db.Filters.Any(f => f.UserRow == filter.UserRow && f.Id == filter.Id);
                 if (filterAny) 
                 {
                     _db.Filters.Update(filter);
@@ -103,6 +109,17 @@ namespace OhanaSafeguard.Controllers.Tables
         {
             try
             {
+                var userExist = _db.Users.Any(u => u.UserRow == filter.UserRow);
+                if (userExist == false)
+                {
+                    return new ReturnMessage(ErrorMessages.CantDelete, false);
+                }
+
+                var filterInUse = _db.credentialStorages.Any(cs => cs.Filter == filter.Id);
+                if (filterInUse == true)
+                {
+                    return new ReturnMessage(ErrorMessages.CantDeleteFilter, false);
+                }
                 if (filter.Id > 0)
                 {
                     _db.Filters.Remove(filter);
@@ -111,7 +128,7 @@ namespace OhanaSafeguard.Controllers.Tables
                 }
                 else
                 {
-                    var filterToDelete = await _db.Filters.FirstOrDefaultAsync(f => f.UserId == filter.UserId && f.Name == filter.Name);
+                    var filterToDelete = await _db.Filters.FirstOrDefaultAsync(f => f.UserRow == filter.UserRow && f.Name == filter.Name);
                     if (filterToDelete != null)
                     {
                         _db.Filters.Remove(filterToDelete);

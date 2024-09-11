@@ -15,12 +15,12 @@ namespace OhanaSafeguard.Controllers.Views
         {
             _db = db ?? throw new ArgumentNullException(nameof(db));
         }
-        [HttpGet ("UserId")]
-        public async Task<ReturnMessage> Get(int UserId)
+        [HttpGet ("UserRow")]
+        public async Task<ReturnMessage> Get(string userRow)
         {
             try
             {
-                var filter = await _db.CredentialViews.Where(cv => cv.UserId == UserId).ToListAsync();
+                var filter = await _db.CredentialViews.Where(cv => cv.UserRow == userRow).ToListAsync();
                 if (filter == null)
                 {
                     return new ReturnMessage(ErrorMessages.NotFound,false);

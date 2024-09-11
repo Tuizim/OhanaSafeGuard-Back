@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("OhanaSafeguard")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+450265b3a631cc4fd32bb27e9ac216f88361d174")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+68ef506a5a6051d69c37c6010fb1724056811ab4")]
 [assembly: System.Reflection.AssemblyProductAttribute("OhanaSafeguard")]
 [assembly: System.Reflection.AssemblyTitleAttribute("OhanaSafeguard")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

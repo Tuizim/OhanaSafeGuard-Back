@@ -23,7 +23,7 @@ namespace OhanaSafeguard.Controllers.Tables
         }
 
         [HttpGet]
-        public async Task<ReturnMessage> GetUserId( string login,string password)
+        public async Task<ReturnMessage> GetUserRow( string login,string password)
         {
             try
             {
@@ -32,7 +32,7 @@ namespace OhanaSafeguard.Controllers.Tables
                 {
                     return new ReturnMessage(ErrorMessages.NotFound, false);
                 }
-                return new ReturnMessage(success: true, message: SuccessMessage.GetSuccess, response: user.Id);
+                return new ReturnMessage(success: true, message: SuccessMessage.GetSuccess, response: user.UserRow);
             }
             catch
             {

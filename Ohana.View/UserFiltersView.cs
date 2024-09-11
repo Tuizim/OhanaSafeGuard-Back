@@ -6,13 +6,14 @@ namespace Ohana.View
     [Table("userfilterview", Schema = "ohanasafeguard")]
     public class UserFiltersView 
     { 
-        [Column("filter_id")]
+        [Column("id")]
         public int FilterId { get; set; }
-        [Column("user_id")]
-        public int UserId { get; set; }
-        [Column("filter_name")]
+        [Column("userrow")]
+        public string? UserRow { get; set; }
+        [Column("name")]
         public string? FilterName { get; set; }
-        [Column("filter_type")]
-        public string? FilterType { get; set; }
+        [Column("type")]
+        public bool FilterType { get; set; }
+
     }
 }

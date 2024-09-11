@@ -13,11 +13,15 @@
         #region Busca
         public const string NotFound = "The requested item was not found.";
         public const string JustExist = "There is already a similar field created for this user";
-        public const string CantDelete = "It will not be possible to delete this item as it has not been located.";
+        public const string UserNotFound = "User not found";
         #endregion
         #region Insert
         public const string PostError = "An unexpected error occurred when we tried to insert.";
         public const string UpdateError = "An unexpected error occurred when we tried to update.";
+        #endregion
+        #region Delete
+        public const string CantDeleteFilter = "Cant delete, filter in use.";
+        public const string CantDelete = "It will not be possible to delete this item as it has not been located.";
         #endregion
     }
 }

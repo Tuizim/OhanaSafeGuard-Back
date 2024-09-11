@@ -15,5 +15,8 @@ namespace Ohana.Domain
 
         [Column("password")]
         public string? Password { get; set; }
+
+        [Column("userrow")]
+        public string? UserRow { get; set; }
     }
 }

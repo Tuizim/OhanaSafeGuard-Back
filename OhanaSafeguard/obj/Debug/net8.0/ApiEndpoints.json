@@ -54,14 +54,14 @@
   {
     "ContainingType": "OhanaSafeguard.Controllers.Tables.CredentialStorageController",
     "Method": "Get",
-    "RelativePath": "CredentialStorage/UserId",
+    "RelativePath": "CredentialStorage/Userrow",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "userId",
-        "Type": "System.Int32",
+        "Name": "userrow",
+        "Type": "System.String",
         "IsRequired": false
       }
     ],
@@ -80,14 +80,14 @@
   {
     "ContainingType": "OhanaSafeguard.Controllers.Tables.CredentialStorageController",
     "Method": "GetById",
-    "RelativePath": "CredentialStorage/UserId/CredentialId",
+    "RelativePath": "CredentialStorage/UserRow/CredentialId",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "userId",
-        "Type": "System.Int32",
+        "Name": "userrow",
+        "Type": "System.String",
         "IsRequired": false
       },
       {
@@ -111,37 +111,17 @@
   {
     "ContainingType": "OhanaSafeguard.Controllers.Views.CredentialViewController",
     "Method": "Get",
-    "RelativePath": "CredentialView/UserId",
+    "RelativePath": "CredentialView/UserRow",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "UserId",
-        "Type": "System.Int32",
+        "Name": "userRow",
+        "Type": "System.String",
         "IsRequired": false
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "Ohana.MessageLibrary.ReturnMessage",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "OhanaSafeguard.Controllers.Tables.DefaultFilterController",
-    "Method": "Get",
-    "RelativePath": "DefaultFilter",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
     "ReturnTypes": [
       {
         "Type": "Ohana.MessageLibrary.ReturnMessage",
@@ -228,15 +208,46 @@
   },
   {
     "ContainingType": "OhanaSafeguard.Controllers.Tables.FilterController",
-    "Method": "GetByUser",
-    "RelativePath": "Filter/UserId",
+    "Method": "GetById",
+    "RelativePath": "Filter/UserId/UserRow",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "userId",
+        "Name": "id",
         "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "userrow",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Ohana.MessageLibrary.ReturnMessage",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "OhanaSafeguard.Controllers.Tables.FilterController",
+    "Method": "GetByUser",
+    "RelativePath": "Filter/userrow",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userrow",
+        "Type": "System.String",
         "IsRequired": false
       }
     ],
@@ -254,7 +265,7 @@
   },
   {
     "ContainingType": "OhanaSafeguard.Controllers.Tables.UserController",
-    "Method": "GetUserId",
+    "Method": "GetUserRow",
     "RelativePath": "User",
     "HttpMethod": "GET",
     "IsController": true,
@@ -286,14 +297,14 @@
   {
     "ContainingType": "OhanaSafeguard.Controllers.Views.UserFiltersViewController",
     "Method": "Get",
-    "RelativePath": "UserFiltersView/UserId",
+    "RelativePath": "UserFiltersView/UserRow",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "userId",
-        "Type": "System.Int32",
+        "Name": "userrow",
+        "Type": "System.String",
         "IsRequired": false
       }
     ],

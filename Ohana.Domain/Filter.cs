@@ -13,8 +13,10 @@ namespace Ohana.Domain
         [Column("name")]
         public string? Name { get; set; }
         
-        [Column("user_id")]
-        public int UserId { get; set; }
+        [Column("userrow")]
+        public string? UserRow { get; set; }
+        [Column("type")]
+        public bool Type { get; set; }
 
     }
 }

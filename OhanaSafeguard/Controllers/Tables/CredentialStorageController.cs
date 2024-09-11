@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Ohana.Domain;
 using Ohana.Infraestrutura;
 using Ohana.MessageLibrary;
+using System.Net;
 
 namespace OhanaSafeguard.Controllers.Tables
 {
@@ -15,12 +16,12 @@ namespace OhanaSafeguard.Controllers.Tables
         {
             _db = db ?? throw new ArgumentNullException(nameof(db));
         }
-        [HttpGet("UserId")]
-        public async Task<ReturnMessage> Get(int userId)
+        [HttpGet("Userrow")]
+        public async Task<ReturnMessage> Get(string userrow)
         {
             try
             {
-                var credentials = await _db.credentialStorages.Where(x => x.UserId == userId).ToListAsync();
+                var credentials = await _db.credentialStorages.Where(x => x.UserRow == userrow).ToListAsync();
                 if (credentials == null)
                 {
                     return new ReturnMessage(ErrorMessages.NotFound, false);
@@ -32,12 +33,12 @@ namespace OhanaSafeguard.Controllers.Tables
                 return new ReturnMessage(message: ErrorMessages.ServerError + ex.Message, success: false);
             }
         }
-        [HttpGet("UserId/CredentialId")]
-        public async Task<ReturnMessage> GetById(int userId, int credentialId)
+        [HttpGet("UserRow/CredentialId")]
+        public ReturnMessage GetById(string userrow, int credentialId)
         {
             try
             {
-                var credential = _db.credentialStorages.Where(cs => cs.UserId == userId && cs.ID == credentialId).FirstOrDefault();
+                var credential = _db.credentialStorages.Where(cs => cs.UserRow == userrow && cs.ID == credentialId).FirstOrDefault();
                 if (credential == null)
                 {
                     return new ReturnMessage(ErrorMessages.NotFound, false);
@@ -54,7 +55,16 @@ namespace OhanaSafeguard.Controllers.Tables
         {
             try
             {
+                var userExist = _db.Users.Any(u => u.UserRow == credentialStorage.UserRow);
+                if (userExist == false)
+                {
+                    return new ReturnMessage(ErrorMessages.UserNotFound, false);
+                }
                 var csAny = _db.credentialStorages.Any(cs => cs.ID == credentialStorage.ID);
+                if (csAny)
+                {
+                    return new ReturnMessage(ErrorMessages.CantDeleteFilter, false);
+                }
                 if (csAny || credentialStorage.ID ==-1)
                 {
                     _db.Update(credentialStorage);
@@ -76,7 +86,12 @@ namespace OhanaSafeguard.Controllers.Tables
         {
             try
             {
-                var csAny = _db.credentialStorages.Any(cs => cs.ID == credential.ID && cs.UserId == credential.UserId);
+                var userExist = _db.Users.Any(u => u.UserRow == credential.UserRow);
+                if (userExist == false)
+                {
+                    return new ReturnMessage(ErrorMessages.CantDelete, false);
+                }
+                var csAny = _db.credentialStorages.Any(cs => cs.ID == credential.ID && cs.UserRow == credential.UserRow);
                 if (csAny)
                 {
                     _db.credentialStorages.Remove(credential);
